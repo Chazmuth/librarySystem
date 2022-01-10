@@ -1,10 +1,11 @@
-package com.company;
+package com.company.objects;
 
 public class Book {
     private String title;
     private String ISBN;
     private String author;
     private String genre;
+    private String isIn;
 
     public Book(String title, String ISBN, String author, String genre) {
         this.title = title;

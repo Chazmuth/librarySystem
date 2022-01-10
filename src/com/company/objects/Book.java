@@ -1,16 +1,24 @@
-package com.company;
+package com.company.objects;
 
 public class Book {
     private String title;
     private String ISBN;
     private String author;
     private String genre;
+    private String isIn;
 
-    public Book(String title, String ISBN, String author, String genre) {
+    public Book(String title, String ISBN, String author, String genre, String isIn) {
         this.title = title;
         this.ISBN = ISBN;
         this.author = author;
         this.genre = genre;
+        this.isIn = isIn;
+    }
+
+    @Override
+    public String toString(){
+        return title + "&" + ISBN + "&"
+         + author + "&" + genre + "&" + isIn;
     }
 
     public String getTitle() {
@@ -29,6 +37,10 @@ public class Book {
         return genre;
     }
 
+    public String getisIn() {
+        return isIn;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -43,5 +55,9 @@ public class Book {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public void setisIn(String isIn) {
+        this.isIn = isIn;
     }
 }
